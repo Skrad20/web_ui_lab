@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+</head>
+    <body>
+        <h1>Data</h1>
+            <script>
+                async function postData(url = '', data = {}) {
+                        // Default options are marked with *
+                        const response = await fetch(url, {
+                            method: 'POST', // *GET, POST, PUT, DELETE, 
+                            headers: {
+                            'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data) // body data type must match "Content-Type" header
+                        });
+                        return await response.text(); // parses JSON response into native JavaScript objects
+                    }
+
+                postData('http://localhost:3000/api/data', {
+                    user: { 
+                        name: "Tom",
+                        age:    1
+                    }
+                })
+                    .then((data) => {
+                        console.log(data);
+                        if (parseInt(data) === 1) {
+                            document.write("Good")
+                        } else {
+                            document.write("Had")
+                        }
+                    });
+        </script>
+    </body>
+</html>

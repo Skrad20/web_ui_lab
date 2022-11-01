@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BiotehLab. Form</title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <meta name="description" content="Data analysed">
+        <meta name="keywords" content="data biotech">
+        <meta name="author" content="skrad">
+        <meta name="viewport" content="width=device-width">
+
+    </head>
+    <body>
+        <header><h1>Form connect</h1></header>
+        <nav>
+            <details class="general-menu">
+                <summary>Menu</summary>
+                <ul>
+                    <li><a href="/index.html">General</a></li>
+                    <li><a href="form_connect.html">Form connect</a></li>
+                    <li><a href="form_connect.html">Form test</a></li>
+                </ul>
+            </details>
+        </nav>
+        <main>
+            <h1>Введите данные</h1>
+            <form method="post" >
+                <p>
+                    <label for="login">Login:</label>
+                    <input type="text" autofocus name="login" placeholder="Enter login" />
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" placeholder="Password"/>
+                </p>
+                <p>
+                    <label for="description">Description:</label>
+                    <input type="text" name="description"/>
+                </p>
+                <p>
+                    <label for="number">Number:</label>
+                    <input type="number" name="count" step="1" min="1" max="10000"/>
+                </p>
+                <p>
+                    <label for="count caus">Number caus:</label>
+                    1<input type="range" name="count caus" step="1" min="1" max="10000" value="21" />10000
+                </p>
+                <p>
+                    <label for="caus">Caus connect:</label>
+                    <input type="text" name="caus" list="list_connect"/>
+                </p>
+                <p>
+                    <label for="status">Status</label>
+                    <input type="radio" value="Low" checked name="status">Low
+                </p>
+                <p> 
+                    <input type="radio" value="Hight" name="status"/>Hight
+                </p>
+
+                <input type="submit" value="Отправить" />
+                <input type="reset" calue="Отмена"/>
+            </form>
+
+        </main>
+        <footer>
+            <address> 
+                <p>Контакты для связи <a href="mailto:js@example.com">Том Смит</a>.</p>
+            </address>
+            <p>
+                <a href="/license">Лицензионное соглашение</a> | 
+                <a href="/about">О сайте</a> | 
+                <a href="/donation">Donations</a>
+            </p>
+            <p><small>© Copyright 2022 MyCorp.</small></p>
+
+            <aside style="float:right; width:200px;">
+                <h2>Testing data</h2>
+                <p>
+                    New data in study ...
+                    <a href="data/id=3">View</a>
+                </p>
+            </aside>
+        </footer>
+
+
+        <datalist id="list_connect">
+            <option value="Error" label="site"></option>
+            <option value="Error" label="send"></option>
+        </datalist>
+    </body>
+</html>
